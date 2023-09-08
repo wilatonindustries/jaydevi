@@ -1,0 +1,287 @@
+<!-- 
+
+  <div class="center-container">
+    <div class="container-fluid d-flex justify-content-center align-items-center custom-container" style="width: 100%;">
+      <div class="custom-form">
+        <form [formGroup]="buyForm" (ngSubmit)="onSubmit()"  >
+          <h2 class="mb-4">Trade Position</h2>
+  
+          <div class="form-group">
+            <label for="contract_type">Contract Type</label>
+            <select class="form-control" id="contract_type" formControlName="contract_type" required>
+              <option value="rise">Rise</option>
+              <option value="fall">Fall</option>
+            </select>
+            <div *ngIf="buyForm.get('contract_type')?.invalid && buyForm.get('contract_type')?.touched" class="text-danger">
+              Contract Type is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="currency">Currency</label>
+            <input type="text" class="form-control" id="currency" formControlName="currency" required>
+            <div *ngIf="buyForm.get('currency')?.invalid && buyForm.get('currency')?.touched" class="text-danger">
+              Currency is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" id="amount" formControlName="amount" required>
+            <div *ngIf="buyForm.get('amount')?.invalid && buyForm.get('amount')?.touched" class="text-danger">
+              Amount is required and must be a valid number.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="number" class="form-control" id="duration" formControlName="duration" required>
+            <div *ngIf="buyForm.get('duration')?.invalid && buyForm.get('duration')?.touched" class="text-danger">
+              Duration is required and must be a valid number.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="duration_unit">Duration Unit</label>
+            <select class="form-control" id="duration_unit" formControlName="duration_unit" required>
+              <option value="second">Seconds</option>
+              <option value="minute">Minute</option>
+              <option value="hour">Hour</option>
+              <option value="day">Day</option>
+            </select>
+            <div *ngIf="buyForm.get('duration_unit')?.invalid && buyForm.get('duration_unit')?.touched" class="text-danger">
+              Duration Unit is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="symbol">Symbol</label>
+            <select class="form-control" id="symbol" formControlName="symbol" required>
+              <option value="volatility_10_index">AUD/CAD</option>
+              <option value="volatility_10_index">AUD/CHF</option>
+              <option value="volatility_10_index">AUD/JPY</option>
+              <option value="volatility_10_index">AUD Basket</option>
+              <option value="volatility_10_index">AUD/NZD</option>
+              <option value="volatility_10_index">AUD/USD</option>
+              <option value="volatility_10_index">Australia 200</option>
+              <option value="volatility_10_index">BTC/USD</option>
+              <option value="volatility_10_index">Boom 300 Index</option>
+              <option value="volatility_10_index">Boom 500 Index</option>
+              <option value="volatility_10_index">Boom 1000 Index</option>
+              <option value="volatility_10_index">Crash 300 Index</option>
+              <option value="volatility_10_index">Crash 300 Index</option>
+              <option value="volatility_10_index">Crash 500 Index</option>
+              <option value="volatility_10_index">Crash 1000 Index</option>
+              <option value="volatility_10_index">VETH/USD</option>
+              <option value="volatility_10_index">EUR Basket</option>
+              <option value="volatility_10_index">EUR/AUD</option>
+              <option value="volatility_10_index">EUR/CAD</option>
+              <option value="volatility_10_index">EUR/CHF</option>
+              <option value="volatility_10_index">EUR/GBP</option>
+              <option value="volatility_10_index">EUR/JPY</option>
+              <option value="volatility_10_index">EUR/JPY</option>
+              <option value="volatility_10_index">EUR/NZD</option>
+              <option value="volatility_10_index">EUR/USD</option>
+              <option value="volatility_10_index">Euro 50</option>
+              <option value="volatility_10_index">France 40</option>
+              <option value="volatility_10_index">GBP Basket</option>
+              <option value="volatility_10_index">GBP/AUD</option>
+              <option value="volatility_10_index">GBP/CAD</option>
+              <option value="volatility_10_index">GBP/CHF</option>
+              <option value="volatility_10_index">GBP/JPY</option>
+              <option value="volatility_10_index">GBP/NOK</option>
+              <option value="volatility_10_index">GBP/NZD</option>
+              <option value="volatility_10_index">GBP/USD</option>
+              <option value="volatility_10_index">Germany 40</option>
+              <option value="volatility_10_index">Gold Basket</option>
+              <option value="volatility_10_index">Gold/USD</option>
+              <option value="volatility_10_index">Hong Kong 50</option>
+              <option value="volatility_10_index">Japan 225</option>
+              <option value="volatility_10_index">Jump 10 Index</option>
+              <option value="volatility_10_index">Jump 25 Index</option>
+              <option value="volatility_10_index">Jump 50 Index</option>
+              <option value="volatility_10_index">Jump 75 Index</option>
+              <option value="volatility_10_index">Jump 100 Index</option>
+              <option value="volatility_10_index">Jump 100 Index</option>
+              <option value="volatility_10_index">NZD/JPY</option>
+              <option value="volatility_10_index">NZD/USD</option>
+              <option value="volatility_10_index">Netherlands 25</option>
+              
+              <option value="volatility_10_index">Oil/USD</option>
+              <option value="volatility_10_index">Palladium/USD</option>
+              <option value="volatility_10_index">Platinum/USD</option>
+              <option value="volatility_10_index">Silver/USD</option>
+              <option value="volatility_10_index">Step Index</option>
+              <option value="volatility_10_index">Swiss 20</option>
+              <option value="volatility_10_index">UK 100</option>
+              <option value="volatility_10_index">US 500</option>
+              <option value="volatility_10_index">US Tech 100</option>
+              <option value="volatility_10_index">USD Basket</option>
+              <option value="volatility_10_index">USD/CAD</option>
+              <option value="volatility_10_index">USD/CHF</option>
+              <option value="volatility_10_index">USD/JPY</option>
+              <option value="volatility_10_index">USD/MXN</option>
+
+              <option value="volatility_10_index">USD/NOK</option>
+              <option value="volatility_10_index">USD/PLN</option>
+              <option value="volatility_10_index">USD/SEK</option>
+              <option value="volatility_10_index">Volatility 10 (1s) Index</option>
+              <option value="volatility_10_index">Volatility 10  Index</option>
+              <option value="volatility_10_index">Volatility 25 (1s) Index</option>
+              <option value="volatility_10_index">Volatility 25 Index</option>
+              <option value="volatility_10_index">Volatility 50 (1s) Index</option>
+              <option value="volatility_10_index">Volatility 50  Index</option>
+              <option value="volatility_10_index">Volatility 75 (1s) Index </option>
+              <option value="volatility_10_index">Volatility 75  Index </option>
+              <option value="volatility_10_index">Volatility 100 (1s) Index</option>
+              <option value="volatility_10_index">Volatility 100  Index</option>
+              <option value="volatility_10_index">Volatility 150 (1s) Index</option>
+              <option value="volatility_10_index">Volatility 150  Index</option>
+              <option value="volatility_10_index">Volatility 250 (1s) Index</option>
+              <option value="volatility_10_index">Volatility 250 Index</option>
+              <option value="volatility_10_index">Wall Street 30</option>
+            </select>
+            <div *ngIf="buyForm.get('symbol')?.invalid && buyForm.get('symbol')?.touched" class="text-danger">
+              Symbol is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="basis">Basis</label>
+            <select class="form-control" id="basis" formControlName="basis" required>
+              <option value="payout">Payout</option>
+              <option value="stake">Stake</option>
+               Add more basis options here -->
+            <!-- </select>
+            <div *ngIf="buyForm.get('basis')?.invalid && buyForm.get('basis')?.touched" class="text-danger">
+              Basis is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" formControlName="status" required>
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+               Add more status options here -->
+            <!-- </select>
+            <div *ngIf="buyForm.get('status')?.invalid && buyForm.get('status')?.touched" class="text-danger">
+              Status is required.
+            </div>
+          </div>
+  
+          <div class="d-grid gap-2 mt-4">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-check"></i> Raise
+            </button>
+          </div>
+  
+          <div class="d-grid gap-2 mt-4">
+            <button type="button" class="btn btn-danger btn-block" (click)="onfall()">
+              <i class="fas fa-dollar-sign"></i> Fall
+            </button>
+          </div>
+  
+          <div class="mt-3 text-danger" *ngIf="message">{{ message }}</div>
+        </form>
+      </div>
+    </div>
+  </div>  -->
+
+
+
+  <div class="center-container">
+    <div class="container-fluid d-flex justify-content-center align-items-center custom-container" style="width: 100%;">
+      <div class="custom-form">
+        <form [formGroup]="buyForm" (ngSubmit)="onSubmit()">
+          <h2 class="mb-4">Trade Position</h2>
+  
+          <div class="form-group">
+            <label for="contract_type">Contract Type</label>
+            <input type="text" class="form-control" id="contract_type" formControlName="contract_type" required>
+            <div *ngIf="buyForm.get('contract_type')?.invalid && buyForm.get('contract_type')?.touched" class="text-danger">
+              Contract Type is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="currency">Currency</label>
+            <input type="text" class="form-control" id="currency" formControlName="currency" required>
+            <div *ngIf="buyForm.get('currency')?.invalid && buyForm.get('currency')?.touched" class="text-danger">
+              Currency is required.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" id="amount" formControlName="amount" required>
+            <div *ngIf="buyForm.get('amount')?.invalid && buyForm.get('amount')?.touched" class="text-danger">
+              Amount is required and must be a valid number.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="number" class="form-control" id="duration" formControlName="duration" required>
+            <div *ngIf="buyForm.get('duration')?.invalid && buyForm.get('duration')?.touched" class="text-danger">
+              Duration is required and must be a valid number.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="duration_unit">Duration Unit</label>
+            <input type="text" class="form-control" id="duration_unit" formControlName="duration_unit" required>
+            <div *ngIf="buyForm.get('duration_unit')?.invalid && buyForm.get('duration_unit')?.touched" class="text-danger">
+              Duration Unit is required.
+            </div>
+          </div>
+  
+            <div class="form-group">
+              <label for="symbol">Symbol</label>
+              <input type="text" class="form-control" id="symbol" formControlName="symbol" required>
+              <div *ngIf="buyForm.get('symbol')?.invalid && buyForm.get('symbol')?.touched" class="text-danger">
+                Symbol is required.
+              </div>
+
+            </div>
+          <!-- <div class="form-group">
+            <div *ngIf="buyForm.get('symbol')?.invalid && buyForm.get('symbol')?.touched" class="text-danger">
+              Symbol is required.
+            </div>
+          </div> -->
+  
+  
+          <div class="form-group">
+            <label for="basis">Basis</label>
+            <input type="text" class="form-control" id="basis" formControlName="basis" required>
+            <div *ngIf="buyForm.get('basis')?.invalid && buyForm.get('basis')?.touched" class="text-danger">
+              Basis is required.
+            </div>
+          </div>
+  
+          <!-- <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" class="form-control" id="status" formControlName="status" required>
+            <div *ngIf="buyForm.get('status')?.invalid && buyForm.get('status')?.touched" class="text-danger">
+              Status is required.
+            </div>
+          </div> -->
+  
+          <div class="d-grid gap-2 mt-4">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-check"></i> Raise
+            </button>
+          </div>
+  
+          <div class="d-grid gap-2 mt-4">
+            <button type="button" class="btn btn-danger btn-block" (click)="onfall()">
+              <i class="fas fa-dollar-sign"></i> Fall
+            </button>
+          </div>
+  
+          <div class="mt-3 text-danger" *ngIf="message">{{ message }}</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

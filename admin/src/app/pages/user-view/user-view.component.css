@@ -1,0 +1,45 @@
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .styled-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+
+
+  .container{
+    padding-left: 20%;
+    padding-top: 15%;
+   
+  }
+
+
+   trade-list.component.css */
+.table-container {
+    max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto;
+  }
+   
+

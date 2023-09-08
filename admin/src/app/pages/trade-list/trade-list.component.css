@@ -1,0 +1,86 @@
+.styled-table {
+    /* width: 100px; */
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .styled-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+
+
+  .container {
+    max-height: 400px; /* Adjust the value to fit your layout */
+    overflow-y: auto; /* Add a vertical scrollbar when content exceeds max height */
+    padding-left: 40vh; /* Add left padding */
+    padding-top: 5%;
+    margin-top: 5vh;
+  }
+  
+  
+  /* Style the container */
+.container {
+  max-height: 400px; /* Adjust the value to fit your layout */
+  overflow-y: auto; /* Add a vertical scrollbar when content exceeds max height */
+}
+
+/* Style the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Style the table headers */
+.styled-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Style the table rows */
+.styled-table tbody tr {
+  border: 1px solid #ccc;
+}
+
+/* Style the table cells */
+.styled-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Style the button within the table */
+.styled-table button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Style the button on hover */
+.styled-table button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,52 @@
+<div class="container">
+  <table class="styled-table" >
+    <thead>
+      <tr>
+        <th>SR No</th>
+        <th>Contract Type</th>
+        <th>Currency</th>
+        <th>Amount</th>
+        <th>Duration</th>
+        <th>Duration Unit</th>
+        <th>Symbol</th>
+        <th>Basis</th>
+        <!-- <th>Status</th> -->
+        <th>  
+          <button mat-icon-button (click)="sellAll()">
+            <mat-icon aria-label="Exit">sell all</mat-icon>
+        </button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trade of trades; let i = index">
+        <!-- <td>{{ i + 1 }}</td> -->
+        <p>ID: {{ trade.id }}, Contract Type: {{ trade.contract_type }}</p>
+        <td>{{ trade.contract_type }}</td>
+        <td>{{ trade.currency }}</td>
+        <td>{{ trade.amount }}</td>
+        <td>{{ trade.duration }}</td>
+        <td>{{ trade.duration_unit }}</td>
+        <td>{{ trade.symbol }}</td>
+        <td>{{ trade.basis }}</td>
+        <!-- <td>{{ trade.status }}</td> -->
+          <td>
+          <button mat-icon-button (click)="deleteSell(trade.id)">
+            <mat-icon aria-label="Delete">delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>  
+  </table>
+</div>  
+
+
+
+<!-- //// *ngFor="let trade of trades; let i = index" -->
+
+
+
+
+
+
+
+
