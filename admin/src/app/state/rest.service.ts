@@ -12,7 +12,7 @@ export class RestService {
   exit(tradeId: number) {
     throw new Error('Method not implemented.');
   }
-  url = 'http://localhost:3000';
+  url = 'https://globaltrading.wilatonprojects.com/';
 
   adduser: any;
   baseUrl: any;
