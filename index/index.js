@@ -38,7 +38,7 @@ var connection = mysql.createConnection({
     password: '',
     database: 'sample'
 });
-
+    
 
 // var connection = mysql.createConnection({
 //     host: 'localhost',
