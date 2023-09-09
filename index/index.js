@@ -38,7 +38,7 @@ var connection = mysql.createConnection({
     password: '',
     database: 'sample'
 });
-    
+
 
 // var connection = mysql.createConnection({
 //     host: 'localhost',
@@ -100,7 +100,7 @@ app.post('/adduser', (req, res) => {
 
 //******  POST API ******* */
 
-
+// nxkszjn
 //******  GET API ******* */
 
 app.get('/Alluser', (req, res) => {
