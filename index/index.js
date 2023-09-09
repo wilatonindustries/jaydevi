@@ -125,7 +125,6 @@ app.get('/Alluser', (req, res) => {
 });
 
 //******  GET API ******* */
-// a M,
 //******  PUT API ******* */
 
 app.put('/user/update/:id', (req, res) => {
